@@ -25,8 +25,7 @@ impl Config {
     fn from_lookup(
         mut lookup: impl FnMut(&'static str) -> Option<String>,
     ) -> Result<Self, ConfigError> {
-        let graph_api_version = lookup("GRAPH_API_VERSION")
-            .unwrap_or_else(|| "v25.0".to_string());
+        let graph_api_version = lookup("GRAPH_API_VERSION").unwrap_or_else(|| "v25.0".to_string());
         let posts_config = required_path("POSTS_CONFIG", &mut lookup)?;
         let post_log = required_path("POST_LOG", &mut lookup)?;
         let dry_run = lookup("DRY_RUN")
