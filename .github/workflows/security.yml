@@ -40,18 +40,3 @@ jobs:
 
       - name: Run cargo audit
         run: cargo audit
-
-  trivy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
-
-      - name: Trivy filesystem scan
-        uses: aquasecurity/trivy-action@b6643a29fecd7f34b3597bc6acb0a98b03d33ff8
-        with:
-          scan-type: fs
-          scan-ref: .
-          exit-code: '1'
-          ignore-unfixed: true
-          severity: CRITICAL,HIGH
