@@ -1,0 +1,13 @@
+[[campaigns]]
+name = "Valunds ServiceBok"
+audience = "bilägare"
+tone = "seriös, trygg och enkel"
+cta = "Läs mer via länken i profilen"
+image_url = "https://example.com/valunds-servicebok.webp"
+
+[[campaigns]]
+name = "SkogsKvitto"
+audience = "skogsägare och lantbrukare"
+tone = "saklig, trygg och praktisk"
+cta = "Testa ett enklare sätt att hålla ordning på kvitton"
+image_url = "https://example.com/skogskvitto.webp"
